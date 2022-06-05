@@ -19,7 +19,7 @@ const addBookHandler = (request, h) => {
     const response = h
       .response({
         status: 'fail',
-        message: "Failed to add book. Please input book's name",
+        message: 'Gagal menambahkan buku. Mohon isi nama buku',
       })
       .code(400);
     return response;
@@ -66,7 +66,7 @@ const addBookHandler = (request, h) => {
     const response = h
       .response({
         status: 'success',
-        message: 'Book successfully added into bookself',
+        message: 'Buku berhasil ditambahkan',
         data: {
           bookId: id,
         },
@@ -79,7 +79,7 @@ const addBookHandler = (request, h) => {
   const response = h
     .response({
       status: 'fail',
-      message: 'Failed adding book',
+      message: 'Buku gagal ditambahkan',
     })
     .code(500);
   return response;
@@ -179,7 +179,7 @@ const getAllBooksHandler = (request, h) => {
   const response = h
     .response({
       status: 'fail',
-      message: 'Failed retreiving book',
+      message: 'Gagal mengambil data buku',
     })
     .code(500);
   return response;
@@ -209,7 +209,7 @@ const getBookByIdHandler = (request, h) => {
   const response = h
     .response({
       status: 'fail',
-      message: 'Could not find the specified book',
+      message: 'Buku tidak ditemukan',
     })
     .code(404);
   return response;
@@ -236,7 +236,7 @@ const editBookByIdHandler = (request, h) => {
     const response = h
       .response({
         status: 'fail',
-        message: "Failed updating book. Missing book's name",
+        message: 'Gagal memperbarui buku. Mohon isi nama buku',
       })
       .code(400);
     return response;
@@ -248,7 +248,7 @@ const editBookByIdHandler = (request, h) => {
       .response({
         status: 'fail',
         message:
-          'Failed updating book. readPage tidak boleh lebih besar dari pageCount',
+          'Gagal memperbarui buku. readPage tidak boleh lebih besar dari pageCount',
       })
       .code(400);
     return response;
@@ -277,7 +277,7 @@ const editBookByIdHandler = (request, h) => {
     const response = h
       .response({
         status: 'success',
-        message: 'Success updating book',
+        message: 'Buku berhasil diperbarui',
       })
       .code(200);
     return response;
@@ -287,7 +287,7 @@ const editBookByIdHandler = (request, h) => {
   const response = h
     .response({
       status: 'fail',
-      message: 'Failed updating book. Could not found the specified ID',
+      message: 'Gagal memperbarui buku. Id tidak ditemukan',
     })
     .code(404);
   return response;
@@ -307,7 +307,7 @@ const deleteBookByIdHandler = (request, h) => {
     const response = h
       .response({
         status: 'success',
-        message: 'Successfully deleting book',
+        message: 'Buku berhasil dihapus',
       })
       .code(200);
     return response;
@@ -317,7 +317,7 @@ const deleteBookByIdHandler = (request, h) => {
   const response = h
     .response({
       status: 'fail',
-      message: "Failed deleting book. Could not find the specified book's ID",
+      message: 'Buku gagal dihapus. Id tidak ditemukan',
     })
     .code(404);
   return response;
